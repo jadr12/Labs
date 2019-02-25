@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'yellow',
 
     /*
     |--------------------------------------------------------------------------
@@ -146,7 +146,7 @@ return [
                 ],
 
                 [
-                    'text' => "Ajout d'une image au Carousel",
+                    'text' => "Liste des carousels",
                     'url' => 'carousel',
                 ],
                
@@ -168,6 +168,20 @@ return [
                 [
                     'text' => 'Creations des Projets',
                     'url' => 'projet-create',
+                ],
+        ],
+        ],
+        [
+            'text' => 'Testimonial',
+            'icon' => 'folder-open',
+            'submenu'=>     [
+                [
+                    'text' => 'Liste des Testimoniaux',
+                    'url' => 'testimonial',
+                ],
+                [
+                    'text' => 'Creations des testimoniaux',
+                    'url' => 'testimonial/create',
                 ],
         ],
         ],

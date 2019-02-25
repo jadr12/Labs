@@ -11,8 +11,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Prénom</th>
+        
         <th scope="col">E-mail</th>
         
       </tr>
@@ -21,8 +20,7 @@
         @foreach ($alluser as $item)
       <tr>
         <th scope="row">{{ $item->id }}</th>
-        <td>{{ $item->name }}</td>
-        <td>{{ $item->prenom }}</td>
+        
         <td>{{ $item->email }}</td>
         <td><a href="{{ route('user.show', ['id' =>$item->id]) }}"><button type="button" class="btn btn-primary bouton">Show</button></a>
             <a href="{{ route('user.edit', ['id' =>$item->id]) }}"> <button type="button" class="btn btn-success">Edit</button></a>

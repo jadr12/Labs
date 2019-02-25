@@ -23,6 +23,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Role','role_id','id');
     }
+    public function profil(){
+        
+        return $this->hasOne('App\Profil');
+    }
     /**
      * The attributes that should be hidden for arrays.
      *

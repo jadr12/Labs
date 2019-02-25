@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('carousel.store') }}" method="POST">
+<form action="{{ route('carousel.store') }}" method="POST" enctype="multipart/form-data">
      @csrf
 <div class="input-group mb-3">
         <div class="input-group-prepend">

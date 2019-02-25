@@ -13,8 +13,8 @@ class CarouselTableSeeder extends Seeder
     public function run()
     {
         Carousel::create([
-         'imagecarousel' =>"http://lorempixel.com/g/400/200/"   
+
+            'imagecarousel' => "SjE0zl60yWsrwyIdmW0VpPVORyt2IkQrvNwbVruz.jpeg",
         ]);
-        
     }
 }

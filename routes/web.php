@@ -37,3 +37,6 @@ Route::post('/projet/store','ProjetController@store')->name('projet.store');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('carousel','CarouselController');
+
+Route::resource('testimonial', 'TestimonialController');
+

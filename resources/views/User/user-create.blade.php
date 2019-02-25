@@ -7,12 +7,12 @@
 @stop
 
 @section('content')
-<form action="{{ route('user.store') }}" method="POST">
+<form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
       <label for="">Nom</label>
       <input type="text"
-        class="form-control" name="name" id="" aria-describedby="helpId" placeholder="">
+        class="form-control" name="nom" id="" aria-describedby="helpId" placeholder="">
       
     </div>
     <div class="form-group">
@@ -33,6 +33,15 @@
           class="form-control" name="password" id="" aria-describedby="helpId" placeholder="">
         
       </div>
+      <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" name="image">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
       <button type="submit" class="btn btn-success">Envoyer</button>
     </form>
 @stop

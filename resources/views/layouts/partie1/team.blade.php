@@ -9,25 +9,25 @@
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/1.jpg" alt="">
-                    <h2>Christinne Williams</h2>
-                    <h3>Project Manager</h3>
+                    <img src="{{ Storage::disk('image')->url($user[2]->profil->image) }}" alt="">
+                    <h2>{{ $user[2]->profil->nom }}</h2>
+                    <h3>{{ $user[2]->role->name }}</h3>
                 </div>
             </div>
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/2.jpg" alt="">
-                    <h2>Christinne Williams</h2>
-                    <h3>Junior developer</h3>
+                    <img src="{{ Storage::disk('image')->url($user[0]->profil->image) }}" alt="">
+                    <h2>{{ $user[0]->profil->nom }}</h2>
+                    <h3>{{ $user[0]->role->name }}</h3>
                 </div>
             </div>
             <!-- single member -->
             <div class="col-sm-4">
                 <div class="member">
-                    <img src="img/team/3.jpg" alt="">
-                    <h2>Christinne Williams</h2>
-                    <h3>Digital designer</h3>
+                    <img src="{{ Storage::disk('image')->url($user[1]->profil->image) }}" alt="">
+                    <h2>{{ $user[1]->profil->nom }}</h2>
+                    <h3>{{ $user[1]->role->name }}</h3>
                 </div>
             </div>
         </div>

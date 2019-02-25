@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(SiteContentTableSeeder::class);
         $this->call(ServiceTableSeeder::class);
         $this->call(CarouselTableSeeder::class);
+        $this->call(ProfilTableSeeder::class);
+        $this->call(TestimonialTableSeeder::class);
 
     }
 }

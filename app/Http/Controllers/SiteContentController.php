@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\SiteContent;
 use App\Projet;
 use App\Services;
-
+use App\Carousel;
+use App\User;
+use App\Testimonial;
 class SiteContentController extends Controller
 {
     /**
@@ -18,8 +20,12 @@ class SiteContentController extends Controller
     {
         $site = SiteContent::first();
         $projet=Projet::all();
-        $service=Services::all();
-        return view('index', compact('site','projet','service'));
+        $service = Services::paginate(9);
+        $carousel=Carousel::all();
+        $user=User::all()->take(3);
+        $testimonial=Testimonial::all();  
+        
+        return view('index', compact('site','projet','service','carousel','user','testimonial'));
     }
 
     /**

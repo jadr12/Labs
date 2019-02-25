@@ -14,7 +14,8 @@ class TestimonialController extends Controller
      */
     public function index()
     {
-        //
+        $testimonial= Testimonial::all();
+        return view('Testimonial.testimonial',compact('testimonial'));
     }
 
     /**
@@ -24,7 +25,7 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        //
+        return view('Testimonial.testimonial-create');
     }
 
     /**
@@ -35,7 +36,13 @@ class TestimonialController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nt = new Testimonial;
+        $nt->nomtesti = $request->nomtesti;
+        $nt->entreprise = $request->entreprise;
+        $nt->commentairetesti = $request->commentairetesti;
+        $nt->imagetesti = $request->imagetesti->store('','image');
+        $nt->save();
+        return view('home');
     }
 
     /**

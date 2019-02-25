@@ -15,7 +15,7 @@ class CarouselController extends Controller
     public function index()
     {
         $carousel=Carousel::all();
-        return view('home',compact('carousel'));
+        return view('Carousel.carousel',compact('carousel'));
     }
 
     /**
@@ -37,7 +37,7 @@ class CarouselController extends Controller
     public function store(Request $request)
     {
         $newcarousel = new Carousel;
-        $newcarousel->imagecarousel = $request->imagecarousel;
+        $newcarousel->imagecarousel = $request->imagecarousel->store('','image'); 
         $newcarousel->save();
         return view('home');
     }
@@ -84,6 +84,7 @@ class CarouselController extends Controller
      */
     public function destroy(Carousel $carousel)
     {
-        //
+        $carousel->delete();
+        return redirect()->back();
     }
 }

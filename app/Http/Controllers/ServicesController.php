@@ -18,7 +18,7 @@ class ServicesController extends Controller
     {    
         $site = SiteContent::first();
         $projet=Projet::all();
-        $service=Services::all();
+        $service = Services::paginate(9);
         return view('services',compact('site','projet','service'));
     }
 

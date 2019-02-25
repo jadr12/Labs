@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Profil;
+use Storage;
 
 
 class UserController extends Controller
@@ -20,12 +22,15 @@ class UserController extends Controller
     public function store(Request $request){
 
         $newuser = new User;
-        $newuser ->name = $request->name;
-        $newuser->prenom =$request->prenom;
         $newuser->email = $request->email;
         $newuser->password = $request->password;
-        
         $newuser->save();
+        $np = new Profil;
+        $np->image = $request->image->store('','image');
+        $np->nom = $request->nom;
+        $np->prenom = $request->prenom;
+        $np->user_id = $newuser->id;
+        $np->save();
         return view('home');
 
         
