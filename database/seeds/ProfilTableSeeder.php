@@ -21,16 +21,16 @@ class ProfilTableSeeder extends Seeder
         ]);
         Profil::create([
             'nom' => 'Riahi',
-            'prenom' => 'Jad',
+            'prenom' => 'You',
             'image' => 'KfE5V3AWvE3Z2CIpcSF6LCe1V6g5yXmfso1O2GlM.jpeg',
-            'user_id' => '1',
+            'user_id' => '2',
 
         ]);
         Profil::create([
             'nom' => 'Riahi',
-            'prenom' => 'Jad',
+            'prenom' => 'SAb',
             'image' => 'KfE5V3AWvE3Z2CIpcSF6LCe1V6g5yXmfso1O2GlM.jpeg',
-            'user_id' => '1',
+            'user_id' => '3',
 
         ]);
 

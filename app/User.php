@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Events\Mail;
 
 class User extends Authenticatable
 {
@@ -22,6 +23,12 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo('App\Role','role_id','id');
+    }
+    public function mail(Request $request){
+        event(new Mail($request));
+
+        return redirect()->back();
+
     }
     public function profil(){
         
