@@ -40,3 +40,5 @@ Route::resource('carousel','CarouselController');
 
 Route::resource('testimonial', 'TestimonialController');
 
+Route::resource('newsletter', 'NewsletterController');
+

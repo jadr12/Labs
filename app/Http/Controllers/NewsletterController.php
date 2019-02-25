@@ -35,7 +35,10 @@ class NewsletterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nn = new Newsletter;
+        $nn->email = $request->email;
+        $nn->save();
+        return redirect()->back();
     }
 
     /**

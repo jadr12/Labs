@@ -15,7 +15,8 @@ class CarouselController extends Controller
     public function index()
     {
         $carousel=Carousel::all();
-        return view('Carousel.carousel',compact('carousel'));
+        $site = SiteContent::all();
+        return view('Carousel.carousel',compact('carousel','site'));
     }
 
     /**

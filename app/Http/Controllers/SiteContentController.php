@@ -9,6 +9,9 @@ use App\Services;
 use App\Carousel;
 use App\User;
 use App\Testimonial;
+use App\Newsletter;
+use App\Http\Requests\StoreSiteContent;
+use App\Http\Requests\UpdateSiteContent;
 class SiteContentController extends Controller
 {
     /**
@@ -23,9 +26,10 @@ class SiteContentController extends Controller
         $service = Services::paginate(9);
         $carousel=Carousel::all();
         $user=User::all()->take(3);
-        $testimonial=Testimonial::all();  
+        $testimonial=Testimonial::all(); 
+        $nn = Newsletter::all(); 
         
-        return view('index', compact('site','projet','service','carousel','user','testimonial'));
+        return view('index', compact('site','projet','service','carousel','user','testimonial','nn'));
     }
 
     /**

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Profil;
 use Storage;
+use App\Http\Requests\StoreUser;
+use App\Http\Requests\UpdateUser;
 
 
 class UserController extends Controller
@@ -17,9 +19,9 @@ class UserController extends Controller
     }
     public function create()
     {
-       return view('User.user-create');
+       return view('User.user-create'); 
     }
-    public function store(Request $request){
+    public function store(StoreUser $request){
 
         $newuser = new User;
         $newuser->email = $request->email;
@@ -37,13 +39,16 @@ class UserController extends Controller
     }
     public function show($id){
         $user=user::where('id',$id)->first();
+        dd($user);
         return view ('User.user-show',compact('user'));
     }
     public function edit($id){
         $user=user::where('id', $id)->first();
-        return view ('User.user-edit',compact('user'));
+        $profil=profil::where('id', $id)->first();
+        $profil=Profil::all();
+        return view ('User.user-edit',compact('user','profil'));
     }
-    public function update( Request $request, $id){
+    public function update( UpdateUser $request, $id){
         $alluser = User::find($id);
         //$user = new User;
          $alluser->name=$request->name;
