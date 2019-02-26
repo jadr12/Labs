@@ -137,7 +137,6 @@ return [
         
         [
             'text' => 'Modifcation Site',
-            'url'  => 'sitecontent/1/edit',
             'icon' => 'wikipedia-w',
             'submenu'=>     [
                 [

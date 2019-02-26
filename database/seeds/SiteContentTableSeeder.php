@@ -19,6 +19,8 @@ class SiteContentTableSeeder extends Seeder
             'textupvideo2' => 'Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui,  vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed    ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices.     Quisque porttitor porttitorlaoreet vel risus et luctus.',
             'titreservice' => 'Get in the Lab and see the services',
             'titreteam' => 'Get in the Lab and  meet the team',
+            'titretestimonial' =>'Salut les gens',
+            'lienvideo' => 'https://www.youtube.com/watch?v=DuFVuh6mWWA',
             'titrepromotion' => 'Are you ready to stand out?',
             'stpromotion' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est.',
             'titrecontact' => 'Contact us',

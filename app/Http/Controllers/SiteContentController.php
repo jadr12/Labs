@@ -84,7 +84,7 @@ class SiteContentController extends Controller
      * @param  \App\SiteContent  $siteContent
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SiteContent $siteContent)
+    public function update(UpdateSiteContent $request, SiteContent $siteContent)
     {
         $newsite = SiteContent::first();
         $newsite->titrecarousel = $request->titrecarousel;

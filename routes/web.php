@@ -42,3 +42,5 @@ Route::resource('testimonial', 'TestimonialController');
 
 Route::resource('newsletter', 'NewsletterController');
 
+Route::resource('contact', 'ContactController');
+

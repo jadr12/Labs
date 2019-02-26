@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Carousel;
 use Illuminate\Http\Request;
+use App\Http\Controllers\SiteContent;
 
 class CarouselController extends Controller
 {
@@ -15,7 +16,7 @@ class CarouselController extends Controller
     public function index()
     {
         $carousel=Carousel::all();
-        $site = SiteContent::all();
+        //$site = SiteContent::all();
         return view('Carousel.carousel',compact('carousel','site'));
     }
 

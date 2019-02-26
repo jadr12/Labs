@@ -35,7 +35,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nc = new Contact;
+        $nc->name = $request->name;
+        $nc->email = $request->email;
+        $nc->subject = $request->subject;
+        $nc->message = $request->message;
+        $nc->save();
+
+        return redirect()->back();
     }
 
     /**
